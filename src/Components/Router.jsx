@@ -14,9 +14,9 @@ import Header from "../Components/Header";
 
 export default () => {
   return (
-    <>
-      <Header />
-      <Router>
+    <Router>
+      <>
+        <Header />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/movie" exact component={Movie} />
@@ -24,7 +24,7 @@ export default () => {
           <Route path="/search" exact component={Search} />
           <Redirect from="*" to="/" />
         </Switch>
-      </Router>
-    </>
+      </>
+    </Router>
   );
 };
