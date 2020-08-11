@@ -31,7 +31,6 @@ export default class extends React.Component {
         upComingMovies: upComingMovies,
         topRatedShows: topRatedShows,
       });
-      console.log(popularMovies);
     } catch (error) {
       this.setState({
         error: "Can't find movies information",
@@ -51,7 +50,6 @@ export default class extends React.Component {
       isLoading,
     } = this.state;
     console.log(this.state);
-
     return (
       <HomePresenter
         popularMovies={popularMovies}
