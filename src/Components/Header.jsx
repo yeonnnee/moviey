@@ -5,11 +5,13 @@ import styled from "styled-components";
 const Header = styled.header`
   width: 100%;
   box-shadow: 0 0 20px black;
+  position: fixed;
+  height: 50px;
 `;
 const List = styled.ul`
   width: 300px;
   height: 50px;
-  padding: 20px;
+  margin-left: 20px;
   color: white;
   font-weight: bold;
   display: flex;
@@ -18,15 +20,12 @@ const List = styled.ul`
 `;
 const Item = styled.li`
   font-size: 15px;
+  color: ${(props) => (props.current ? "grey" : "white")};
   &:hover {
     color: grey;
   }
 `;
-const SLink = styled(Link)`
-  &:focus {
-    color: grey;
-  }
-`;
+const SLink = styled(Link)``;
 
 export default withRouter(({ location: { pathname } }) => (
   <Header>

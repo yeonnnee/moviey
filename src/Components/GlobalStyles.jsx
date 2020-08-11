@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 
 const globalStyles = createGlobalStyle`
   ${reset};
+
   a{
     text-decoration: none;
     color: inherit;
@@ -14,11 +15,11 @@ const globalStyles = createGlobalStyle`
   html{
     width: 100vw;
     height: 100vh;
+    padding: 0;
+    margin: 0;
   }
-  
   body{
-    padding: 20px;
-    background-color: #2f3640; 
+    background-color: #151515; 
   }
 `;
 
