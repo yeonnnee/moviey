@@ -41,7 +41,6 @@ const HomePresenter = ({
             id={movie.id}
             title={movie.original_title}
             imageUrl={movie.poster_path}
-            genres={movie.genre_ids}
             isMovie={true}
           />
         ))}
@@ -54,7 +53,6 @@ const HomePresenter = ({
             id={show.id}
             title={show.original_name}
             imageUrl={show.poster_path}
-            genre={show.genre_ids}
             isMovie={false}
           />
         ))}
@@ -67,7 +65,6 @@ const HomePresenter = ({
             id={movie.id}
             title={movie.original_title}
             imageUrl={movie.poster_path}
-            genre={movie.genre_ids}
             isMovie={true}
           />
         ))}
@@ -80,7 +77,6 @@ const HomePresenter = ({
             id={show.id}
             title={show.original_name}
             imageUrl={show.poster_path}
-            genre={show.genre_ids}
             isMovie={false}
           />
         ))}
