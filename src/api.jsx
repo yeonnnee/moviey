@@ -1,22 +1,22 @@
 import axios from "axios";
 
+const api_key = process.env.REACT_APP_API_KEY;
 const api = axios.create({
   baseURL: "https://api.themoviedb.org/3/",
   params: {
-    api_key: "d8a9d029ebb6c10fb108ea1e8831299e",
+    api_key: api_key,
     language: "en-US",
   },
 });
 
 export const getMovies = {
-  popular: () => api.get("movies/popular"),
+  popular: () => api.get("movie/popular"),
   nowPlaying: () => api.get("movie/now_playing"),
   upComing: () => api.get("movie/upcoming"),
   movieDetail: (id) =>
     api.get(`movie/${id}`, {
       params: {
-        similar: "similar",
-        video: "video",
+        append_to_response: "videos",
       },
     }),
   search: (term) =>
@@ -34,8 +34,7 @@ export const getShow = {
   showDetail: (id) =>
     api.get(`tv/${id}`, {
       params: {
-        similar: "similar",
-        video: "video",
+        append_to_response: "videos",
       },
     }),
   search: (term) =>
